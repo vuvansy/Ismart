@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import formatNumber from "../app/utils/utils";
 
 export default function ListProductFeature(props) {
     return (
@@ -28,10 +29,10 @@ export default function ListProductFeature(props) {
                                 </Link>
                                 <div className="price">
                                     <span className="new">
-                                        {product.price_new}đ
+                                        {formatNumber(product.price_new)}đ
                                     </span>
                                     <span className="old">
-                                        {product.price_old}đ
+                                        {formatNumber(product.price_old)}đ
                                     </span>
                                 </div>
                                 <div className="action clearfix">

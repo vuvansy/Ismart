@@ -16,27 +16,30 @@ export default function HeaderUser() {
                     <div id="main-menu-wp" className="fl-right">
                         <ul id="main-menu" className="clearfix">
                             <li>
-                                <Link href="home.html" title="">
+                                <Link href="/" title="">
                                     Trang chủ
                                 </Link>
                             </li>
                             <li>
-                                <Link href="category_product.html" title="">
+                                <Link
+                                    href="/products/categoryProduct/65ef17cecce6ab14801fd9b7"
+                                    title=""
+                                >
                                     Sản phẩm
                                 </Link>
                             </li>
                             <li>
-                                <Link href="blog.html" title="">
+                                <Link href="blog" title="">
                                     Blog
                                 </Link>
                             </li>
                             <li>
-                                <Link href="detail_blog.html" title="">
+                                <Link href="detail_blog" title="">
                                     Giới thiệu
                                 </Link>
                             </li>
                             <li>
-                                <Link href="login.html" title="">
+                                <Link href="login" title="">
                                     Đăng nhập
                                 </Link>
                             </li>

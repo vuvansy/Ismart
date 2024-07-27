@@ -1,0 +1,174 @@
+export default function FilterProduct({ onPriceRangeChange, onBrandChange }) {
+    return (
+        <div className="section" id="filter-product-wp">
+            <div className="section-head">
+                <h3 className="section-title">Bộ lọc tìm kiếm</h3>
+            </div>
+            <div className="section-detail">
+                <form method="POST" action="">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td colSpan="2">Mức giá</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="price-range"
+                                        value="0"
+                                        onChange={onPriceRangeChange}
+                                    />
+                                </td>
+                                <td>Tất cả</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="price-range"
+                                        value="under-10m"
+                                        onChange={onPriceRangeChange}
+                                    />
+                                </td>
+                                <td>Dưới 10.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="price-range"
+                                        value="10m-15m"
+                                        onChange={onPriceRangeChange}
+                                    />
+                                </td>
+                                <td>10.000.000đ - 15.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="price-range"
+                                        value="15m-20m"
+                                        onChange={onPriceRangeChange}
+                                    />
+                                </td>
+                                <td>15.000.000đ - 20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="price-range"
+                                        value="20m-30m"
+                                        onChange={onPriceRangeChange}
+                                    />
+                                </td>
+                                <td>20.000.000đ - 30.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="price-range"
+                                        value="over-30m"
+                                        onChange={onPriceRangeChange}
+                                    />
+                                </td>
+                                <td>Trên 30.000.000đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td colSpan="2">Hãng sản xuất</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="r-brand"
+                                        value="Acer"
+                                        onChange={onBrandChange}
+                                    />
+                                </td>
+                                <td>Acer</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="r-brand"
+                                        value="Dell"
+                                        onChange={onBrandChange}
+                                    />
+                                </td>
+                                <td>Dell</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="r-brand"
+                                        value="Apple"
+                                        onChange={onBrandChange}
+                                    />
+                                </td>
+                                <td>Apple</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="r-brand"
+                                        value="Oppo"
+                                        onChange={onBrandChange}
+                                    />
+                                </td>
+                                <td>Oppo</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="r-brand"
+                                        value="Hp"
+                                        onChange={onBrandChange}
+                                    />
+                                </td>
+                                <td>Hp</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="r-brand"
+                                        value="Lenovo"
+                                        onChange={onBrandChange}
+                                    />
+                                </td>
+                                <td>Lenovo</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="r-brand"
+                                        value="Samsung"
+                                        onChange={onBrandChange}
+                                    />
+                                </td>
+                                <td>Samsung</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    );
+}
