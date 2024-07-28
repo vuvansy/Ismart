@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Search from "./Search";
 
 export default function HeaderUser() {
     return (
@@ -22,25 +23,20 @@ export default function HeaderUser() {
                             </li>
                             <li>
                                 <Link
-                                    href="/products/categoryProduct/65ef17cecce6ab14801fd9b7"
+                                    href={`/products/categoryProduct/${"65ef17cecce6ab14801fd9b7"}`}
                                     title=""
                                 >
                                     Sản phẩm
                                 </Link>
                             </li>
                             <li>
-                                <Link href="blog" title="">
-                                    Blog
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="detail_blog" title="">
+                                <Link href="/about" title="">
                                     Giới thiệu
                                 </Link>
                             </li>
                             <li>
-                                <Link href="login" title="">
-                                    Đăng nhập
+                                <Link href="/contact" title="">
+                                    Liên hệ
                                 </Link>
                             </li>
                         </ul>
@@ -52,19 +48,7 @@ export default function HeaderUser() {
                     <Link href="/" title="" id="logo" className="fl-left">
                         <img src="/images/logo.png" />
                     </Link>
-                    <div id="search-wp" className="fl-left">
-                        <form method="POST" action="">
-                            <input
-                                type="text"
-                                name="s"
-                                id="s"
-                                placeholder="Nhập từ khóa tìm kiếm tại đây!"
-                            />
-                            <button type="submit" id="sm-s">
-                                Tìm kiếm
-                            </button>
-                        </form>
-                    </div>
+                    <Search />
                     <div id="action-wp" className="fl-right">
                         <div id="advisory-wp" className="fl-left">
                             <span className="title">Tư vấn</span>
