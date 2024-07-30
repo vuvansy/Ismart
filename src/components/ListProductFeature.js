@@ -1,8 +1,40 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import formatNumber from "../app/utils/utils";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart, setCartItems } from "@/redux/slices/cartSlice";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ListProductFeature(props) {
+    const router = useRouter();
+    const [quantity, setQuantity] = useState(1);
+    const dispatch = useDispatch();
+    const cart = useSelector((state) => state.cart);
+
+    useEffect(() => {
+        const cartItems = localStorage.getItem("cartItems");
+        if (cartItems) {
+            dispatch(setCartItems(JSON.parse(cartItems)));
+        }
+    }, [dispatch]);
+
+    const handleAddToCart = (product, quantity) => {
+        dispatch(addToCart({ item: product, quantity: quantity }));
+        alert("Thêm thành công!");
+    };
+
+    const handleBuyNow = (product) => {
+        const itemInCart = cart.items.find((item) => item._id === product._id);
+        if (itemInCart) {
+            dispatch(addToCart({ item: product, quantity: 1 }));
+        } else {
+            dispatch(addToCart({ item: product, quantity: 1 }));
+        }
+
+        router.push("/cart");
+    };
     return (
         <>
             <div className="section" id="list-product-wp">
@@ -36,20 +68,22 @@ export default function ListProductFeature(props) {
                                     </span>
                                 </div>
                                 <div className="action clearfix">
-                                    <Link
-                                        href="/cart"
+                                    <a
                                         title="Thêm giỏ hàng"
                                         className="add-cart fl-left"
+                                        onClick={() =>
+                                            handleAddToCart(product, quantity)
+                                        }
                                     >
                                         Thêm giỏ hàng
-                                    </Link>
-                                    <Link
-                                        href="/checkout"
+                                    </a>
+                                    <a
                                         title="Mua ngay"
                                         className="buy-now fl-right"
+                                        onClick={() => handleBuyNow(product)}
                                     >
                                         Mua ngay
-                                    </Link>
+                                    </a>
                                 </div>
                             </li>
                         ))}

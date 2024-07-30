@@ -11,6 +11,7 @@ import "../../../public/responsive.css";
 import Footer from "@/components/layout-user/Footer";
 import MenuRespon from "@/components/layout-user/MenuRespon";
 import HeaderUser from "@/components/layout-user/HeaderUser";
+import Providers from "@/redux/Provider";
 
 export const metadata = {
     title: "Ismart",
@@ -19,28 +20,30 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body>
-                <div id="site">
-                    <div id="container">
-                        <HeaderUser />
-                        <div
-                            id="main-content-wp"
-                            className="home-page clearfix category-product-page detail-product-page cart-page checkout-page"
-                        >
-                            <div className="wp-inner">{children}</div>
+            <Providers>
+                <body>
+                    <div id="site">
+                        <div id="container">
+                            <HeaderUser />
+                            <div
+                                id="main-content-wp"
+                                className="home-page clearfix category-product-page detail-product-page cart-page checkout-page"
+                            >
+                                <div className="wp-inner">{children}</div>
+                            </div>
+                            <Footer />
                         </div>
-                        <Footer />
+                        <MenuRespon />
                     </div>
-                    <MenuRespon />
-                </div>
-                <script src="/js/main.js"></script>
+                    <script src="/js/main.js"></script>
 
-                <script src="/js/jquery-2.2.4.min.js"></script>
+                    <script src="/js/jquery-2.2.4.min.js"></script>
 
-                <script src="/js/elevatezoom-master/jquery.elevatezoom.js"></script>
-                <script src="/js/carousel/owl.carousel.js"></script>
-                <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-            </body>
+                    <script src="/js/elevatezoom-master/jquery.elevatezoom.js"></script>
+                    <script src="/js/carousel/owl.carousel.js"></script>
+                    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+                </body>
+            </Providers>
         </html>
     );
 }
