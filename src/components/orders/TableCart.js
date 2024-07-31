@@ -8,7 +8,7 @@ import {
     incrementQuantity,
     decrementQuantity,
 } from "@/redux/slices/cartSlice";
-import formatNumber from "../../app/utils/utils";
+
 import { useMemo } from "react";
 
 export default function TableCart() {
@@ -87,9 +87,7 @@ export default function TableCart() {
                                                 </Link>
                                             </td>
                                             <td>
-                                                {formatNumber(
-                                                    product.price_new
-                                                )}
+                                                {product.price_new.toLocaleString()}
                                                 đ
                                             </td>
                                             <td>
@@ -124,10 +122,10 @@ export default function TableCart() {
                                                 </a>
                                             </td>
                                             <td>
-                                                {formatNumber(
+                                                {(
                                                     product.price_new *
-                                                        product.quantity
-                                                )}
+                                                    product.quantity
+                                                ).toLocaleString()}
                                                 đ
                                             </td>
                                             <td>
@@ -180,7 +178,8 @@ export default function TableCart() {
                                                 >
                                                     Tổng giá:{" "}
                                                     <span>
-                                                        {formatNumber(total)}đ
+                                                        {total.toLocaleString()}
+                                                        đ
                                                     </span>
                                                 </p>
                                             </div>

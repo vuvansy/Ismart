@@ -12,6 +12,8 @@ import Footer from "@/components/layout-user/Footer";
 import MenuRespon from "@/components/layout-user/MenuRespon";
 import HeaderUser from "@/components/layout-user/HeaderUser";
 import Providers from "@/redux/Provider";
+import "../../../public/fontawesome-free-6.5.2/css/all.min.css";
+import "../../../public/fontawesome-free-6.5.2/css/solid.min.css";
 
 export const metadata = {
     title: "Ismart",

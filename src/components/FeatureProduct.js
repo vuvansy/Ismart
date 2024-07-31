@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import formatNumber from "../app/utils/utils";
+
 import { useRouter } from "next/navigation";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, setCartItems } from "@/redux/slices/cartSlice";
@@ -76,10 +76,10 @@ export default function FeatureProduct(props) {
                             </Link>
                             <div className="price">
                                 <span className="new">
-                                    {formatNumber(product.price_new)}đ
+                                    {product.price_new.toLocaleString()}đ
                                 </span>
                                 <span className="old">
-                                    {formatNumber(product.price_old)}đ
+                                    {product.price_old.toLocaleString()}đ
                                 </span>
                             </div>
                             <div className="action clearfix">

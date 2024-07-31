@@ -1,6 +1,6 @@
 "use client";
 
-import formatNumber from "../app/utils/utils";
+
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, setCartItems } from "@/redux/slices/cartSlice";
@@ -57,10 +57,10 @@ export default function ListProduct(props) {
                             </Link>
                             <div className="price">
                                 <span className="new">
-                                    {formatNumber(product.price_new)}đ
+                                    {(product.price_new).toLocaleString()}đ
                                 </span>
                                 <span className="old">
-                                    {formatNumber(product.price_old)}đ
+                                    {(product.price_old).toLocaleString()}đ
                                 </span>
                             </div>
                             <div className="action clearfix">
