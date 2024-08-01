@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Search from "./Search";
 import MiniCart from "../orders/MiniCart";
+import UserWrap from "./UserWrap";
 
 export default function HeaderUser() {
     return (
@@ -50,10 +51,12 @@ export default function HeaderUser() {
                         <img src="/images/logo.png" />
                     </Link>
                     <Search />
-                    <div id="action-wp" className="fl-right">
+                    <div
+                        id="action-wp"
+                        className="fl-right d-flex align-items-center"
+                    >
                         <div id="advisory-wp" className="fl-left">
-                            <span className="title">Tư vấn</span>
-                            <span className="phone">0987.654.321</span>
+                            <UserWrap />
                         </div>
                         <MiniCart />
                     </div>
