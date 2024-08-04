@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useMemo, useRef } from "react";
 import { setCartItems } from "@/redux/slices/cartSlice";
-import formatNumber from "../../app/utils/utils";
 export default function MiniCart() {
     const dispatch = useDispatch();
 
@@ -121,7 +120,7 @@ export default function MiniCart() {
                                         {product.name}
                                     </a>
                                     <p className="price">
-                                        {formatNumber(product.price_new)}đ
+                                        {(product.price_new).toLocaleString()}đ
                                     </p>
                                     <p className="qty">
                                         Số lượng:{" "}
@@ -133,7 +132,7 @@ export default function MiniCart() {
                     </ul>
                     <div className="total-price clearfix">
                         <p className="title fl-left">Tổng:</p>
-                        <p className="price fl-right">{formatNumber(total)}đ</p>
+                        <p className="price fl-right">{total.toLocaleString()}đ</p>
                     </div>
 
                     <div className="action-cart clearfix">
