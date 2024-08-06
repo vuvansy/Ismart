@@ -42,18 +42,18 @@ a:hover {
     width: 15rem;
     height: 100vh;
     z-index: 500;
-    /* padding-top: 3.625rem;
+    padding-top: 3.625rem;
     position: fixed;
     top: 0px;
-    left: 0; */
+    left: 0;
 }
 
 #wp-content {
     flex: auto;
     /* height: calc(100vh - 58px); */
     min-height: 100vh;
-    /* padding-top: 3.625rem;
-    padding-left: 15rem; */
+    padding-top: 3.625rem;
+    padding-left: 15rem;
 }
 
 #content {
