@@ -27,7 +27,6 @@ export default function RootLayout({ children }) {
                             </div>
                         </div>
                     </div>
-                    <script src="/js/main.js"></script>
                     <script src="/js/jquery-2.2.4.min.js"></script>
                     <script src="/js/elevatezoom-master/jquery.elevatezoom.js"></script>
                     <script src="/js/carousel/owl.carousel.js"></script>
