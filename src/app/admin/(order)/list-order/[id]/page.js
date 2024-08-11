@@ -1,17 +1,19 @@
 "use client";
-import useSWR from "swr";
-import { useState } from "react";
+import Analytic from "@/components/admin-order/Analytic";
 import TableListOrder from "@/components/admin-order/TableListOrder";
 import PaginationAdmin from "@/components/layout-admin/PaginationAdmin";
-import Analytic from "@/components/admin-order/Analytic";
+import { useState } from "react";
+import useSWR from "swr";
+
 const fetcher = (url) => fetch(url).then((res) => res.json());
-export default function ListOrder() {
+
+export default function OrderStatus({ params }) {
     const [searchQuery, setSearchQuery] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 10;
 
     const { data: orders, error: ordersError } = useSWR(
-        "http://localhost:3000/orders",
+        `http://localhost:3000/orders/status/${params.id}`,
         fetcher
     );
 
