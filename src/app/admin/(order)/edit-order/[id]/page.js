@@ -2,6 +2,7 @@
 import useSWR from "swr";
 import { useState } from "react";
 import TableInfoProduct from "@/components/admin-order/TableInfoProduct";
+import InfoOrder from "@/components/admin-order/InfoOrder";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -202,6 +203,7 @@ export default function EditOrder({ params }) {
                             infoOrders={infoOrders}
                         />
                     </div>
+                    <InfoOrder infoOrders={infoOrders} />
                 </div>
             </div>
         </div>
