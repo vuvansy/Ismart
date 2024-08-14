@@ -112,7 +112,7 @@ export default function Home() {
             <div className="row">
                 <Statistical
                     bgColor="bg-warning"
-                    headerText="DOANH SỐ"
+                    headerText="DOANH THU"
                     count={`${totalRevenue.toLocaleString()} VNĐ`}
                     bodyText="Doanh số hệ thống"
                 />
